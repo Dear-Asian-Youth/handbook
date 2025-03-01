@@ -1,17 +1,11 @@
 ---
-title: My Site
+title: The Handbook
 toc: false
 ---
 
-This is the landing page.
-
-## Explore
 
 {{< cards >}}
-  {{< card link="docs" title="Docs" icon="book-open" >}}
-  {{< card link="about" title="About" icon="user" >}}
+  {{< card link="docs/engineering" title="Engineering" icon="book-open" >}}
+  {{< card link="docs/handbook" title="Handbook" icon="user" >}}
 {{< /cards >}}
 
-## Documentation
-
-For more information, visit [Hextra](https://imfing.github.io/hextra).

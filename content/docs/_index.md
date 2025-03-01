@@ -1,18 +1,7 @@
 ---
-title: Documentation
-next: first-page
+title: Docs
 ---
 
-This is a demo of the theme's documentation layout.
+# Welcome to the DAY Handbook!
 
-## Hello, World!
 
-```go {filename="main.go"}
-package main
-
-import "fmt"
-
-func main() {
-    fmt.Println("Hello, World!")
-}
-```
