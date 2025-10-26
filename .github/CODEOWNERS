@@ -1,13 +1,59 @@
 # CODEOWNERS for Dear Asian Youth Handbook
-# Based on GitLab's handbook best practices
+# 
+# How it works:
+# - When a PR is opened, GitHub automatically assigns reviewers based on changed files
+# - Each line follows: file-pattern @owner1 @owner2 @organization/team-name
+# - IMPORTANT: Last matching pattern takes precedence (most specific rules go last)
+# 
 # More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
 
-# Default owner for all files
+# ---
+# Default Owners (Catch-all)
+# ---
+# This should be first - it catches any files not matched by more specific rules below
 * @Uzayer
 
-# Specific sections (can be customized later)
+# ---
+# Infrastructure & Configuration
+# ---
+# GitHub workflows, actions, and repo settings
+/.github/ @Uzayer
+
+# Build configuration and dependencies
+astro.config.mjs @Uzayer
+package.json @Uzayer
+pnpm-lock.yaml @Uzayer
+tsconfig.json @Uzayer
+
+# Styles and assets
+/src/styles/ @Uzayer
+/src/assets/ @Uzayer
+/public/ @Uzayer
+
+# Utility scripts and configuration
+/src/utils/ @Uzayer
+/src/components/ @Uzayer
+/src/content.config.ts @Uzayer
+
+# ---
+# Documentation Sections (Assign section DRIs below)
+# ---
+# About Handbook - Meta documentation
 /src/content/docs/about-handbook/ @Uzayer
+
+# About DAY - Organization information
 /src/content/docs/about-day/ @Uzayer
+
+# Engineering - Technical documentation
 /src/content/docs/engineering/ @Uzayer
+
+# Operations - Operational procedures
 /src/content/docs/operations/ @Uzayer
+
+# ---
+# Specific File Overrides (Most specific rules last)
+# ---
+# Example: To assign a specific person to a critical file, add lines here:
+# /src/content/docs/operations/code-of-conduct/index.mdx @specific-owner
+# /src/content/docs/engineering/roadmap/index.mdx @tech-lead
 
