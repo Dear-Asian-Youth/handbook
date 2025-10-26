@@ -1,14 +1,4 @@
 {
-  "functions": {
-    "api/auth.cjs": {
-      "memory": 1024,
-      "maxDuration": 10
-    },
-    "api/callback.cjs": {
-      "memory": 1024,
-      "maxDuration": 10
-    }
-  },
   "redirects": [
     {
       "source": "/admin",
