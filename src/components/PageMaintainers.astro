@@ -1,6 +1,6 @@
 ---
 import { getOwnersForFile } from '../utils/codeowners';
-import { getGitHubUrls } from '../utils/github';
+import { resolveContentFilePath } from '../utils/github';
 
 interface Props {
   entryId: string;
@@ -8,15 +8,12 @@ interface Props {
 
 const { entryId } = Astro.props;
 
-// Get GitHub URLs for this entry
-const { edit: editUrl, view: viewUrl, filePath } = getGitHubUrls(
-  entryId,
-  'Dear-Asian-Youth',
-  'handbook'
-);
-
-// Get maintainers for this file
+// Resolve the file path and get maintainers
+const filePath = resolveContentFilePath(entryId);
 const maintainers = getOwnersForFile(filePath);
+
+// Get the edit URL from Starlight's config
+const editUrl = `https://github.com/Dear-Asian-Youth/handbook/edit/main/${filePath}`;
 ---
 
 <div class="page-maintainers">
@@ -59,18 +56,6 @@ const maintainers = getOwnersForFile(filePath);
         <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
       </svg>
       Edit this page
-    </a>
-    <a
-      href={viewUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="edit-button view-source"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="16 18 22 12 16 6"></polyline>
-        <polyline points="8 6 2 12 8 18"></polyline>
-      </svg>
-      View source
     </a>
   </div>
 </div>
@@ -158,16 +143,6 @@ const maintainers = getOwnersForFile(filePath);
   .edit-page:hover {
     background-color: var(--sl-color-accent-high);
     border-color: var(--sl-color-accent-high);
-  }
-
-  .view-source {
-    background-color: transparent;
-    color: var(--sl-color-white);
-  }
-
-  .view-source:hover {
-    background-color: var(--sl-color-gray-6);
-    border-color: var(--sl-color-gray-4);
   }
 
   .edit-button svg {

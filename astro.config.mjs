@@ -9,7 +9,10 @@ export default defineConfig({
 		mermaid(),
 				starlight({
 	title: 'Dear Asian Youth Handbook',
-	social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/dearasianyouth' }],
+	editLink: {
+		baseUrl: 'https://github.com/Dear-Asian-Youth/handbook/edit/main/',
+	},
+	social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/Dear-Asian-Youth/handbook' }],
 	customCss: ['./src/styles/custom.css'],
 	components: {
 		PageSidebar: './src/components/PageSidebar.astro',
@@ -24,12 +27,40 @@ export default defineConfig({
 		autogenerate: { directory: 'about-day' },
 	},
 	{
+		label: 'Operations',
+		autogenerate: { directory: 'operations' },
+	},
+	{
+		label: 'Diversity & Inclusion',
+		autogenerate: { directory: 'diversity-inclusion' },
+	},
+	{
 		label: 'Engineering',
 		autogenerate: { directory: 'engineering' },
 	},
 	{
-		label: 'Operations',
-		autogenerate: { directory: 'operations' },
+		label: 'Finance & Fundraising',
+		autogenerate: { directory: 'finance-fundraising' },
+	},
+	{
+		label: 'Literature',
+		autogenerate: { directory: 'literature' },
+	},
+	{
+		label: 'Marketing',
+		autogenerate: { directory: 'marketing' },
+	},
+	{
+		label: 'Podcast',
+		autogenerate: { directory: 'podcast' },
+	},
+	{
+		label: 'Policy',
+		autogenerate: { directory: 'policy' },
+	},
+	{
+		label: 'Social Media',
+		autogenerate: { directory: 'social-media' },
 	},
 ],
 	}),
