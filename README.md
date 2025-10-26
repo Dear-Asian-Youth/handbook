@@ -45,14 +45,20 @@ The handbook includes Decap CMS for a user-friendly editing experience. Navigate
    - Click "Register application"
    - Copy the **Client ID** and generate a **Client Secret**
 
-2. Configure Vercel Environment Variables:
+2. Configure Environment Variables:
+   
+   **For Production (Vercel):**
    - Go to your Vercel project dashboard
    - Navigate to Settings > Environment Variables
-   - Add the following variables:
+   - Add the following variables (see `env.example` for reference):
      - `OAUTH_CLIENT_ID`: Your GitHub OAuth App Client ID
      - `OAUTH_CLIENT_SECRET`: Your GitHub OAuth App Client Secret
      - `BASE_URL`: `https://handbook.dearasianyouth.org` (for custom domain support)
    - Redeploy the site for changes to take effect
+   
+   **For Local Development (Vercel CLI):**
+   - Copy `env.example` to `.env` and fill in your values
+   - Run `vercel dev` to test the OAuth flow locally
 
 **Using the CMS:**
 - Navigate to `https://handbook.dearasianyouth.org/admin`
