@@ -26,3 +26,28 @@
 	--sl-color-bg-sidebar: #1e1e1e;
 	--sl-color-bg-nav: #2a2a2a;
 }
+
+/* Page Maintainers Section - Additional Global Styles */
+.page-maintainers {
+	font-family: var(--sl-font);
+}
+
+/* Ensure maintainers section is visible in both light and dark modes */
+[data-theme="light"] .page-maintainers .maintainer-username {
+	color: var(--sl-color-gray-1);
+}
+
+[data-theme="dark"] .page-maintainers .maintainer-username {
+	color: var(--sl-color-gray-2);
+}
+
+/* Improve button contrast */
+[data-theme="light"] .page-maintainers .view-source {
+	color: var(--sl-color-gray-1);
+	border-color: var(--sl-color-gray-4);
+}
+
+[data-theme="light"] .page-maintainers .view-source:hover {
+	background-color: var(--sl-color-gray-6);
+	border-color: var(--sl-color-gray-3);
+}

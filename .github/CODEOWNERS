@@ -1,0 +1,13 @@
+# CODEOWNERS for Dear Asian Youth Handbook
+# Based on GitLab's handbook best practices
+# More info: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for all files
+* @Uzayer
+
+# Specific sections (can be customized later)
+/src/content/docs/about-handbook/ @Uzayer
+/src/content/docs/about-day/ @Uzayer
+/src/content/docs/engineering/ @Uzayer
+/src/content/docs/operations/ @Uzayer
+

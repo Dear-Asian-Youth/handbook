@@ -11,6 +11,9 @@ export default defineConfig({
 	title: 'Dear Asian Youth Handbook',
 	social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/dearasianyouth' }],
 	customCss: ['./src/styles/custom.css'],
+	components: {
+		PageSidebar: './src/components/PageSidebar.astro',
+	},
 			sidebar: [
 	{
 		label: 'About the Handbook',
