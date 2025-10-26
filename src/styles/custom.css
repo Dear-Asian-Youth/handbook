@@ -1,0 +1,28 @@
+/* Custom styles for the Dear Asian Youth Handbook */
+
+/* Import Be Vietnam Pro font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+	/* Custom font */
+	--sl-font: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+	
+	/* Custom colors - replace these with your brand colors */
+	--sl-color-accent-low: #f5e6e6;
+	--sl-color-accent: #8b4040;
+	--sl-color-accent-high: #5A2020;
+	
+	/* Sidebar colors */
+	--sl-color-bg-sidebar: #f8f9fa;
+	--sl-color-bg-nav: #ffffff;
+}
+
+/* Dark mode colors */
+[data-theme="dark"] {
+	--sl-color-accent-low: #5A2020;
+	--sl-color-accent: #8b4040;
+	--sl-color-accent-high: #d98989;
+	
+	--sl-color-bg-sidebar: #1e1e1e;
+	--sl-color-bg-nav: #2a2a2a;
+}
