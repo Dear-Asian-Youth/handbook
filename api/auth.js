@@ -46,10 +46,8 @@ export default async (req, res) => {
       state: state,
     });
 
-    res.status(200).json({
-      url: authorizationUri,
-      state: state,
-    });
+    // Redirect to GitHub OAuth authorization page
+    res.redirect(authorizationUri);
   } catch (error) {
     console.error('Error in auth endpoint:', error);
     res.status(500).json({ 
