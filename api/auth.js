@@ -1,7 +1,7 @@
-const { AuthorizationCode } = require('simple-oauth2');
-const randomstring = require('randomstring');
+import { AuthorizationCode } from 'simple-oauth2';
+import randomstring from 'randomstring';
 
-module.exports = async (req, res) => {
+export default async (req, res) => {
   try {
     // Validate required environment variables
     if (!process.env.OAUTH_CLIENT_ID) {
