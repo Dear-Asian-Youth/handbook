@@ -31,9 +31,41 @@ All commands are run from the root of the project:
 
 ## 📝 Adding Content
 
+### Option 1: Using Decap CMS (Recommended for Non-Technical Users)
+
+The handbook includes Decap CMS for a user-friendly editing experience. Navigate to `/admin` on the deployed site to access the content management interface.
+
+**First-Time Setup (Admin Only):**
+
+1. Create a GitHub OAuth App:
+   - Go to GitHub Settings > Developer settings > OAuth Apps > New OAuth App
+   - Set **Application name**: `DAY Handbook CMS`
+   - Set **Homepage URL**: `https://handbook.dearasianyouth.org`
+   - Set **Authorization callback URL**: `https://handbook.dearasianyouth.org/api/callback`
+   - Click "Register application"
+   - Copy the **Client ID** and generate a **Client Secret**
+
+2. Configure Vercel Environment Variables:
+   - Go to your Vercel project dashboard
+   - Navigate to Settings > Environment Variables
+   - Add the following variables:
+     - `OAUTH_CLIENT_ID`: Your GitHub OAuth App Client ID
+     - `OAUTH_CLIENT_SECRET`: Your GitHub OAuth App Client Secret
+     - `BASE_URL`: `https://handbook.dearasianyouth.org` (for custom domain support)
+   - Redeploy the site for changes to take effect
+
+**Using the CMS:**
+- Navigate to `https://handbook.dearasianyouth.org/admin`
+- Click "Login with GitHub"
+- Edit content using the visual editor
+- Changes are committed directly to the GitHub repository
+
+### Option 2: Direct File Editing
+
 Add `.md` or `.mdx` files to `src/content/docs/` to create new pages. The file structure matches the URL structure.
 
 ## 🔗 Learn More
 
 - [Starlight Documentation](https://starlight.astro.build/)
 - [Astro Documentation](https://docs.astro.build)
+- [Decap CMS Documentation](https://decapcms.org/docs/intro/)

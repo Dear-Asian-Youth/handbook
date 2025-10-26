@@ -1,0 +1,14 @@
+{
+  "functions": {
+    "api/**/*.js": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "env": {
+    "OAUTH_CLIENT_ID": "@oauth_client_id",
+    "OAUTH_CLIENT_SECRET": "@oauth_client_secret",
+    "BASE_URL": "@base_url"
+  }
+}
+

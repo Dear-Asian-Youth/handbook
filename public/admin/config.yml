@@ -1,0 +1,153 @@
+backend:
+  name: github
+  repo: Dear-Asian-Youth/handbook
+  branch: main
+  base_url: https://handbook.dearasianyouth.org
+  auth_endpoint: api/auth
+
+media_folder: "src/assets"
+public_folder: "/src/assets"
+
+collections:
+  - name: "about-handbook"
+    label: "About the Handbook"
+    folder: "src/content/docs/about-handbook"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "about-day"
+    label: "About Dear Asian Youth"
+    folder: "src/content/docs/about-day"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Template", name: "template", widget: "select", options: ["doc", "splash"], required: false }
+      - label: "Hero"
+        name: "hero"
+        widget: "object"
+        required: false
+        fields:
+          - { label: "Tagline", name: "tagline", widget: "string", required: false }
+          - label: "Image"
+            name: "image"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "File Path", name: "file", widget: "string" }
+          - label: "Actions"
+            name: "actions"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Icon", name: "icon", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "operations"
+    label: "Operations"
+    folder: "src/content/docs/operations"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "diversity-inclusion"
+    label: "Diversity & Inclusion"
+    folder: "src/content/docs/diversity-inclusion"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "engineering"
+    label: "Engineering"
+    folder: "src/content/docs/engineering"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "finance-fundraising"
+    label: "Finance & Fundraising"
+    folder: "src/content/docs/finance-fundraising"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "literature"
+    label: "Literature"
+    folder: "src/content/docs/literature"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "marketing"
+    label: "Marketing"
+    folder: "src/content/docs/marketing"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "podcast"
+    label: "Podcast"
+    folder: "src/content/docs/podcast"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "policy"
+    label: "Policy"
+    folder: "src/content/docs/policy"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "social-media"
+    label: "Social Media"
+    folder: "src/content/docs/social-media"
+    create: true
+    extension: "mdx"
+    format: "frontmatter"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+
