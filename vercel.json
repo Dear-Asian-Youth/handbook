@@ -9,6 +9,16 @@
     "OAUTH_CLIENT_ID": "@oauth_client_id",
     "OAUTH_CLIENT_SECRET": "@oauth_client_secret",
     "BASE_URL": "@base_url"
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/admin",
+      "destination": "/admin/index.html"
+    },
+    {
+      "source": "/admin/",
+      "destination": "/admin/index.html"
+    }
+  ]
 }
 
