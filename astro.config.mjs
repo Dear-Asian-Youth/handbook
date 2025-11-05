@@ -18,10 +18,46 @@ export default defineConfig({
 		PageSidebar: './src/components/PageSidebar.astro',
 	},
 			sidebar: [
-	{
-		label: 'All Docs',
-		autogenerate: { directory: '.', collapsed: false },
-	},
+		{
+			label: 'About DAY',
+			autogenerate: { directory: 'about-day', collapsed: true },
+		},
+		{
+			label: 'About the Handbook',
+			autogenerate: { directory: 'about-handbook', collapsed: true },
+		},
+		{
+			label: 'Diversity & Inclusion',
+			autogenerate: { directory: 'diversity-inclusion', collapsed: true },
+		},
+		{
+			label: 'Engineering',
+			autogenerate: { directory: 'engineering', collapsed: true },
+		},
+		{
+			label: 'Finance & Fundraising',
+			autogenerate: { directory: 'finance-fundraising', collapsed: true },
+		},
+		{
+			label: 'Literature',
+			autogenerate: { directory: 'literature', collapsed: true },
+		},
+		{
+			label: 'Marketing',
+			autogenerate: { directory: 'marketing', collapsed: true },
+		},
+		{
+			label: 'Podcast',
+			autogenerate: { directory: 'podcast', collapsed: true },
+		},
+		{
+			label: 'Policy',
+			autogenerate: { directory: 'policy', collapsed: true },
+		},
+		{
+			label: 'Social Media',
+			autogenerate: { directory: 'social-media', collapsed: true },
+		},
 	],
 	}),
 	],
