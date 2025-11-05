@@ -19,50 +19,10 @@ export default defineConfig({
 	},
 			sidebar: [
 	{
-		label: 'About the Handbook',
-		autogenerate: { directory: 'about-handbook' },
+		label: 'All Docs',
+		autogenerate: { directory: '.', collapsed: false },
 	},
-	{
-		label: 'About Dear Asian Youth',
-		autogenerate: { directory: 'about-day' },
-	},
-	{
-		label: 'Operations',
-		autogenerate: { directory: 'operations' },
-	},
-	{
-		label: 'Diversity & Inclusion',
-		autogenerate: { directory: 'diversity-inclusion' },
-	},
-	{
-		label: 'Engineering',
-		autogenerate: { directory: 'engineering' },
-	},
-	{
-		label: 'Finance & Fundraising',
-		autogenerate: { directory: 'finance-fundraising' },
-	},
-	{
-		label: 'Literature',
-		autogenerate: { directory: 'literature' },
-	},
-	{
-		label: 'Marketing',
-		autogenerate: { directory: 'marketing' },
-	},
-	{
-		label: 'Podcast',
-		autogenerate: { directory: 'podcast' },
-	},
-	{
-		label: 'Policy',
-		autogenerate: { directory: 'policy' },
-	},
-	{
-		label: 'Social Media',
-		autogenerate: { directory: 'social-media' },
-	},
-],
+	],
 	}),
 	],
 });
